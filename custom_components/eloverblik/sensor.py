@@ -59,6 +59,10 @@ class EloverblikEnergy(Entity):
         attributes = dict()
         attributes['Metering date'] = self._data_date
         attributes['metering_date'] = self._data_date
+        attributes['state_class'] = 'measurement'
+        attributes['last_reset'] = '1970-01-01T00:00:00'
+        attributes['device_class'] = 'energy'
+        attributes['unit_of_measurement'] = 'kWh'
         
         return attributes
 
